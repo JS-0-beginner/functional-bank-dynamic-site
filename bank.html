@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Home-Page</title>
+
+    <!-- Tailwind - CDN -->
+
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    
+</head>
+<body>
+<!--------------------------------------------------------------------------------- 
+  //////////////////////////////// Header \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\  
+ ---------------------------------------------------------------------------------->
+    
+ <header>
+    
+    <h1 class="text-5xl text-center mt-8">
+        Here's Your 
+        <span class="font-semibold text-purple-600" >Money</span>
+    </h1>
+</header> 
+<!--------------------------------------------------------------------------------- 
+  ////////////////////////////////// Main \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\  
+ ---------------------------------------------------------------------------------->
+<main class="w-3/4 mx-auto" >
+<!------------------------------------- 
+  /////// Balace - Statement \\\\\\\\\ 
+ -------------------------------------->
+    <section class="mt-8">
+        <div class="grid grid-cols-3 gap-4 ">
+
+            <!-- deposit -->
+            <div class="text-white bg-blue-300 p-8 rounded">
+                <h3 class="text-2xl">Deposit</h3>
+                <h3 class="text-4xl">$<span id="current-deposit" >0.00</span> </h3>
+            </div>
+            <!-- Withdraw -->
+            <div class="text-white bg-green-300 p-8 rounded">
+                <h3 class="text-2xl">Withdraw</h3>
+                <h3 class="text-4xl">$<span id="current-withdraw" >0.00</span></h3>
+            </div>
+            <!-- Balance -->
+            <div class="text-white bg-yellow-400 p-8 rounded">
+                <h3 class="text-2xl">Balance</h3>
+                <h3 class="text-4xl">$<span id="current-balance" >12000</span> </h3>
+            </div>
+
+        </div>
+    </section>
+<!------------------------------------- 
+  /////////// Transaction \\\\\\\\\\\\ 
+ -------------------------------------->
+    <section class="mt-8">
+        <div class="grid grid-cols-2 gap-4">
+
+            <!-- Deposit Amount -->
+            <div class="bg-blue-100 p-8 rounded">
+                <h3 class="text-2xl">Please Deposit</h3>
+                <div>
+
+                    <!-- deposit Field -->
+                    <input 
+                    id="deposit-amount"
+                    class="
+                    block 
+                    border 
+                    border-gray-400 
+                    rounded
+                    w-3/4
+                    px-2
+                    mb-4" type="text" placeholder="$ you want to deposit">
+    
+                        
+                    <!-- deposit Button -->
+                    <button id="deposit-button" class="bg-blue-600 px-4 py-2 rounded text-white font-medium" >Deposit</button>
+    
+    
+                </div>
+            </div>
+
+            <!-- Withdraw Amount -->
+            <div class="bg-green-100 p-8 rounded">
+                <h3 class="text-2xl">Please Withdraw</h3>
+                <div>
+
+                    <!-- Withdraw Field -->
+                    <input 
+                    id="withdraw-amount"
+                    class="
+                    block 
+                    border 
+                    border-gray-400 
+                    rounded
+                    w-3/4
+                    px-2
+                    mb-4" type="text" placeholder="$ you want to withdraw">
+    
+                        
+                    <!-- deposit Button -->
+                    <button id="withdraw-button" class="bg-green-600 px-4 py-2 rounded text-white font-medium" >Withdraw</button>
+    
+    
+                </div>
+            </div>
+
+            
+
+        </div>
+    </section>
+
+</main>
+
+<!--------------------------------------------------------------------------------- 
+  ////////////////////////////////// JS \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\  
+ ---------------------------------------------------------------------------------->
+
+ <script src="js/banking.js"></script>
+
+</body>
+
+</html>
