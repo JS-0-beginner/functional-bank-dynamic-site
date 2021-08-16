@@ -1,0 +1,71 @@
+WD_day_26_M26
+
+/*-------------------------------------------------------------------------------*\
+  ////////////////////////////////// CSS \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\*-------------------------------------------------------------------------------*/
+
+/*-------------------------------*\
+  //////////// CSS \\\\\\\\\\\\
+\*-------------------------------*/
+
+/*-----------*\
+  CSS
+\*-----------*/
+
+<!-------- 
+    HTML
+ --------->
+
+<!--------------------------------------------------------------------------------- 
+  ////////////////////////////////// HTML \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\  
+ ---------------------------------------------------------------------------------->
+
+<!------------------------------------- 
+  /////////////// HTML \\\\\\\\\\\\\\\ 
+ -------------------------------------->
+
+Method - 1
+
+(1)Button Event Handler
+(2)input field's value
+(3)Connect (2) to Display field's result 
+(4)adding new continuous input field's value to previous Display field's result
+(5)Update in Balance
+
+Method - 2
+
+(1)Button Event Handler
+
+(2)input field's value
+
+	(2-i)change the input field's value to float-number
+
+(3)Connect (2) to Display field's result 
+	
+	(3-i)change the Display field's result to float-number
+	(3-ii)Clear input field
+
+(4)adding new continuous input field's value to previous Display field's result
+
+(5)Update in Balance
+
+Variables of Deposit
+
+depositAmount
+getDepositAmountText
+getDepositAmount
+currentDeposit
+getCurrentDepositText
+getCurrentDeposit
+
+
+
+
+
+
+
+
+
+
+
+
