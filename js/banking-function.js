@@ -1,4 +1,6 @@
-////// One \\\\\\\\\\
+/*-------------------------------------------*\
+  /////////////// Input - Value \\\\\\\\\\\\\
+\*-------------------------------------------*/
 function getInputValue(inputId)
 {
     
@@ -11,8 +13,9 @@ function getInputValue(inputId)
   return amountValue;
 
 }
-
-//////// Two \\\\\\\\\\\\\\\\
+/*-------------------------------------------*\
+  ////////////// Update Total \\\\\\\\\\\\\\\
+\*-------------------------------------------*/
 function updateTotalField(totalFieldId, amount)
 {
   // debugger;
@@ -21,8 +24,9 @@ function updateTotalField(totalFieldId, amount)
   const previousTotal = parseFloat(totalText);
   totalElement.innerText = previousTotal + amount;
 }
-
-/////////// another \\\\\\\\\\\\\\
+/*-------------------------------------------*\
+  ////////////// Current Balance \\\\\\\\\\\\
+\*-------------------------------------------*/
 function getCurrentBalance()
 {
   const balanceTotal = document.getElementById('balance-total');
@@ -30,14 +34,12 @@ function getCurrentBalance()
   const previousBalanceTotal = parseFloat(balanceTotalText);
   return previousBalanceTotal;
 }
-
-
-////////////// Third \\\\\\\\\\\\\\\\
+/*-------------------------------------------*\
+  ////////////// Update Balance \\\\\\\\\\\\
+\*-------------------------------------------*/
 function updateBalance(amount, isAdd)
 {
   const balanceTotal = document.getElementById('balance-total');
-  /* const balanceTotalText = balanceTotal.innerText;
-  const previousBalanceTotal = parseFloat(balanceTotalText); */
   const previousBalanceTotal = getCurrentBalance();
   if(isAdd == true)
   {
@@ -49,8 +51,6 @@ function updateBalance(amount, isAdd)
   }
   
 }
-
-
 /*-------------------------------------------*\
   /////////////// Deposit \\\\\\\\\\\\\\\\\\\
 \*-------------------------------------------*/
@@ -66,12 +66,7 @@ function()
     updateTotalField('total-deposit', depositAmount);
     updateBalance(depositAmount, true);
   }
-  
-
-}
-
-);
-
+});
 /*------------------------------------*\
   /////////// Withdraw \\\\\\\\\\\\\
 \*------------------------------------*/
@@ -84,12 +79,10 @@ function()
   if(withdrawAmount > 0 && withdrawAmount < currentBalance )
   {
     updateTotalField('total-withdraw', withdrawAmount);
-    updateBalance(withdrawAmount, true);
+    updateBalance(withdrawAmount, false);
   }
   if( withdrawAmount > currentBalance )
   {
     console.log("You can't withdraw more...")
   }
-}
-
-);
+});
