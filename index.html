@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Login</title>
+
+    <!-- Tailwind - CDN -->
+
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+<body class="bg-green-50">
+<!--------------------------------------------------------------------------------- 
+  //////////////////////////////// Header \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\  
+ ---------------------------------------------------------------------------------->
+    
+    <header>
+        <h1 class="text-5xl text-center mt-16">
+            Welcome To 
+            <span class="font-semibold text-purple-600" >Bank</span>
+        </h1>
+    </header>
+
+<!--------------------------------------------------------------------------------- 
+  ////////////////////////////////// Main \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\  
+ ---------------------------------------------------------------------------------->
+
+    <main>
+
+        <section class="rounded bg-green-100 w-2/4 mx-auto mt-8 p-8 content-center">
+
+            <div class="w-64 mx-auto">
+
+                <h3 class="text-2xl mb-4" >Please Login</h3>
+            <!-- Login Form -->
+
+            <div>
+
+                <!-- email -->
+                <input 
+                id="user-email"
+                class="
+                block 
+                border 
+                border-gray-400 
+                rounded
+                w-60
+                px-2
+                mb-4" type="text" placeholder="your email">
+
+                <!-- password -->
+                <input 
+                id="user-password"
+                class="
+                block 
+                border
+                border-gray-400 
+                rounded
+                w-60
+                px-2
+                mb-4" type="password" placeholder="password" id="" name="">
+
+                <!-- Login Button -->
+                <button id="login-button" class="bg-green-600 px-4 py-1 rounded text-white font-medium" >Log In</button>
+
+
+            </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+<!--------------------------------------------------------------------------------- 
+  ////////////////////////////////// JS \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\  
+ ---------------------------------------------------------------------------------->
+
+<script src="js/login.js"></script>
+
+</body>
+</html>
