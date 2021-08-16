@@ -1,48 +1,52 @@
-/*----------------------------------------------------------------------*\
-  //////////////////////// Function Demo \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-\*----------------------------------------------------------------------*/
-
-/* 
-function doubleTheNumber(number)
-{
-    const result = number *2;
-    return result;
-}
-const result = doubleTheNumber(7);
-const result = doubleTheNumber(5); 
-*/
-
+////// One \\\\\\\\\\
 function getInputValue(inputId)
 {
     
   const inputField = document.getElementById(inputId);
   const inputAmountText = inputField.value;
-  const amount = parseFloat(inputAmountText);
+  const amountValue = parseFloat(inputAmountText);
   
   inputField.value= '';
 
-  return amount;
+  return amountValue;
 
 }
 
-function updateTotalField(totalField, amount)
+//////// Two \\\\\\\\\\\\\\\\
+function updateTotalField(totalFieldId, amount)
 {
-  debugger;
+  // debugger;
   const totalElement = document.getElementById(totalFieldId);
   const totalText = totalElement.innerText; 
-  
   const previousTotal = parseFloat(totalText);
-
   totalElement.innerText = previousTotal + amount;
 }
 
-function updateBalance()
+/////////// another \\\\\\\\\\\\\\
+function getCurrentBalance()
 {
-  const currentBalance = document.getElementById('current-balance');
-  const currentBalanceText = currentBalance.innerText;
-  const previousBalance = parseFloat(currentBalanceText);
+  const balanceTotal = document.getElementById('balance-total');
+  const balanceTotalText = balanceTotal.innerText;
+  const previousBalanceTotal = parseFloat(balanceTotalText);
+  return previousBalanceTotal;
+}
 
-  currentBalance.innerText = previousBalance + getDepositAmount;
+
+////////////// Third \\\\\\\\\\\\\\\\
+function updateBalance(amount, isAdd)
+{
+  const balanceTotal = document.getElementById('balance-total');
+  /* const balanceTotalText = balanceTotal.innerText;
+  const previousBalanceTotal = parseFloat(balanceTotalText); */
+  const previousBalanceTotal = getCurrentBalance();
+  if(isAdd == true)
+  {
+    balanceTotal.innerText = previousBalanceTotal + amount;
+  }
+  else
+  {
+    balanceTotal.innerText = previousBalanceTotal - amount;
+  }
   
 }
 
@@ -75,10 +79,17 @@ function()
 document.getElementById('withdraw-button').addEventListener('click',
 function()
 {
-  updateTotalField('withdraw-amount', withdrawAmount)
-
-
-
+  const withdrawAmount = getInputValue('withdraw-input');
+  const currentBalance = getCurrentBalance();
+  if(withdrawAmount > 0 && withdrawAmount < currentBalance )
+  {
+    updateTotalField('total-withdraw', withdrawAmount);
+    updateBalance(withdrawAmount, true);
+  }
+  if( withdrawAmount > currentBalance )
+  {
+    console.log("You can't withdraw more...")
+  }
 }
 
-)
+);
