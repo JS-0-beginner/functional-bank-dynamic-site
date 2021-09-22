@@ -18,6 +18,10 @@ function()
     {
         window.location.href = 'bank.html';
     }
+    else
+    {
+        document.getElementById('error').style.display="block";
+    }
     
 }
 
