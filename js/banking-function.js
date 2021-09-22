@@ -66,6 +66,11 @@ function()
     updateTotalField('total-deposit', depositAmount);
     updateBalance(depositAmount, true);
   }
+  else
+  {
+    document.getElementById('deposit-input').placeholder='Please Enter Valid Amount';
+    
+  }
 });
 /*------------------------------------*\
   /////////// Withdraw \\\\\\\\\\\\\
@@ -81,8 +86,17 @@ function()
     updateTotalField('total-withdraw', withdrawAmount);
     updateBalance(withdrawAmount, false);
   }
+  else
+  {
+    document.getElementById('withdraw-input').placeholder='Please Enter Valid Amount';
+    
+  }
   if( withdrawAmount > currentBalance )
   {
     console.log("You can't withdraw more...")
+    document.getElementById('withdraw-input')
+    .placeholder='Sorry... Insufficient Balance';
   }
+  
+
 });
